@@ -155,6 +155,9 @@ contract ForkTest is Test {
         // Verify minter was added
         assertTrue(krwt.minters(address(custodian)));
 
+        //Set public to allow mint
+        custodian.setPublic(true);
+
         console.log("Custodian set as minter successfully!");
 
         vm.stopPrank();
